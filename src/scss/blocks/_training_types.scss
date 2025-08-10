@@ -1,0 +1,53 @@
+
+.layers{
+    position: relative;
+    max-width: 1920px;
+    color: var(	--light-gray);
+    padding: 50px 0;
+    // background-color: var(--text-color);
+   margin-inline:auto;
+   
+}
+.training_types_list{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap:10px;
+     @include tablet{
+        grid-template-columns: repeat(3,1fr);
+        gap:10px;
+    }
+    @include tablet1{
+        display: grid;
+        padding: 20px 30px;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+    }
+    @include mobile{
+        display: flex;
+        padding: 4px 3px;
+        flex-direction: column;
+    }
+}
+.training_types_item{
+    --tarainingtypesbgitomSize: 55px;
+    --tarainingtypesbgitomSize1: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    row-gap: 40px;
+    margin: auto;
+    padding-top: var(--tarainingtypesbgitomSize);
+    padding-right: var(--tarainingtypesbgitomSize1);
+    // padding-right:  var(--tarainingtypesbgitomSize1);
+    background:url('../../img/icons/Vector10.svg') 100% 0/var(--tarainingtypesbgitomSize) no-repeat;
+    @include tablet1{
+        --tarainingtypesbgitomSize:40px;
+        row-gap: 15px;
+
+    }
+}
+.trainig_img{
+    @include tablet1{
+        max-width: 120px;
+    }
+}

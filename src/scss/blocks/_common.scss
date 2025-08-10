@@ -1,0 +1,199 @@
+body{
+    font-family:var(--font-main);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.75;
+    background-color: var(--text-color);
+    // color:var(--light-gray);
+   
+}
+svg *[fill]{fill: currentColor;}
+svg *[stroke]{stroke: currentColor;}
+a:hover{ 
+    color: var(--light-gray);
+}
+a,button,input,textarea,svg + f{
+    transition-duration: var(--transition-duration);
+    
+}
+p{
+    margin-block: 0;
+}
+input{
+    height: var(--input-height);
+        padding-left: 20px;
+
+   width: 250px;
+    
+    height: 35px;
+    box-sizing: border-box;
+border: 1px solid rgb(64, 64, 64);
+border-radius: 30px;
+
+    
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input:focus{
+    outline: none;
+    color: #1c1e1c;
+    background-color: #b8c2b8
+}
+input:hover{
+    border-color: #e6f5e6;
+}
+p:not(:last-child){
+    margin-bottom: 24px;
+}
+.container{
+    position: relative;
+    // max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    // margin-inline: auto;
+    @include tablet{
+       
+    }
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.title_medium{
+        color: rgb(255, 255, 255);
+font-family: var(--font-main);
+font-size: 37px;
+font-weight: 700;
+line-height: 52px;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 32px;
+    
+    min-height: var(--header-height);
+    background-color: var(--color-dark-alternative);
+    @include tablet{
+        padding-inline: 5px;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        padding-top: 20px;
+        padding-inline: 15px;
+    }
+
+}
+.nav_logo img{
+    width: 100px;
+    height: 20px;
+    flex-shrink: 0;
+
+
+ }
+.nav_links ul{
+    display: flex;
+    column-gap: 17px;
+    @include mobile{
+        column-gap: 15px;
+        
+    }
+    @include mobile2{
+        column-gap: 15px;
+    }
+}
+
+.nav_links{
+    // height: var(--header-height);
+@include tablet{
+    
+        order: 1;
+        flex-basis: 100%;
+
+}
+}
+.nav_links a{
+    display: inline-flex;
+font-family: var(--font-main);
+font-weight: 700;
+font-style: Bold;
+font-size: 8px;
+line-height: 12px;
+letter-spacing: 1.2px;
+vertical-align: middle;
+text-transform: uppercase;
+align-items: center;
+@include tablet{
+    font-size: 10px;
+}
+
+}
+.nav_links a.is_current::after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: currentColor;
+    gap: 17px;
+    position: relative;
+    left: 7px;
+    bottom: 1px;
+}
+.button_booknow{
+    display: flex;
+    
+    
+}
+.button{
+color: var(--text-color);
+width: 73px;
+height: 28px;
+background-color: #fff;
+border-radius: var(--border-radius);
+font-family:var(--font-main);
+font-weight: 700;
+font-style: Bold;
+font-size: 7px;
+text-align: center;
+line-height: 30px;
+letter-spacing: 1.2px;
+vertical-align: middle;
+text-transform: uppercase;
+&:hover{
+    background-color: var(--light-gray);
+}
+@include tablet{
+    
+}
+}
+.burger_img_header img{
+    width: 29px;
+    height: 29px;
+    margin-left: 10px;
+    @include tablet{
+        
+}
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
